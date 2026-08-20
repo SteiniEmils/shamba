@@ -30,5 +30,5 @@ form?.addEventListener("submit", (event) => {
   const message = String(data.get("message") || "").trim();
   const subject = encodeURIComponent(`SHAMBA enquiry from ${name || "the website"}`);
   const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
-  window.location.href = `mailto:hello@shambaskincare.com?subject=${subject}&body=${body}`;
+  window.location.href = `mailto:shamba@shamba.com?subject=${subject}&body=${body}`;
 });
