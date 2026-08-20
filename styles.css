@@ -389,9 +389,10 @@ a, button { touch-action: manipulation; }
 }
 
 .product-media img.studio {
+  aspect-ratio: 4 / 3;
   object-fit: contain;
   object-position: center;
-  background: #161616;
+  background: transparent;
 }
 
 .product-name {
@@ -780,7 +781,7 @@ a, button { touch-action: manipulation; }
 .product-gallery img.studio {
   object-fit: contain;
   object-position: center;
-  background: #161616;
+  background: transparent;
 }
 
 .inside {
