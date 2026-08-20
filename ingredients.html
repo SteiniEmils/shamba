@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=2">
+  <link rel="stylesheet" href="styles.css?v=3">
   <link rel="icon" href="assets/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 </head>
@@ -23,7 +23,7 @@
     <header class="nav">
       <a class="brand" href="index.html">
         <img src="assets/logo-mark.png" alt="SHAMBA" width="56" height="56">
-        <span>SHAMBA</span>
+        <span class="wordmark">SHAMBA</span>
       </a>
       <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
         <span></span><span></span><span></span>
@@ -44,20 +44,47 @@
     <h1>Simple plants. Honest formulas.</h1>
     <p class="page-lead">We choose a short list of nourishing ingredients and let them do the work. Nothing is added for theatre.</p>
 
-    <h2>Shea butter</h2>
-    <p>Rich and creamy. Softens dry skin and helps hold moisture through the day. At the heart of THAAYU body butter and WENDO lip balm.</p>
+    <figure class="page-photo">
+      <img src="assets/hero.jpg" alt="THAAYU and WENDO with mango, shea, and leaves" width="1200" height="675">
+    </figure>
 
-    <h2>Baobab oil</h2>
-    <p>Light, restoring oil from the baobab tree. Used in THAAYU to soften, restore, and protect.</p>
-
-    <h2>Mango butter</h2>
-    <p>A close companion to shea &mdash; velvety on the skin, with a quiet richness that suits everyday body care.</p>
-
-    <h2>Marula oil</h2>
-    <p>Used in WENDO to nourish lips without heaviness. A familiar oil in Southern and East African skin rituals.</p>
-
-    <h2>Beeswax</h2>
-    <p>Gives WENDO its protective seal. Helps the balm stay put and shield lips from dry air.</p>
+    <div class="ingredient-list">
+      <article class="ingredient">
+        <span class="ingredient-mark" aria-hidden="true"><img src="assets/icons/shea.svg" alt="" width="28" height="28"></span>
+        <div>
+          <h2>Shea butter</h2>
+          <p>Rich and creamy. Softens dry skin and helps hold moisture through the day. At the heart of THAAYU body butter and WENDO lip balm.</p>
+        </div>
+      </article>
+      <article class="ingredient">
+        <span class="ingredient-mark" aria-hidden="true"><img src="assets/icons/baobab.svg" alt="" width="28" height="28"></span>
+        <div>
+          <h2>Baobab oil</h2>
+          <p>Light, restoring oil from the baobab tree. Used in THAAYU to soften, restore, and protect.</p>
+        </div>
+      </article>
+      <article class="ingredient">
+        <span class="ingredient-mark" aria-hidden="true"><img src="assets/icons/mango.svg" alt="" width="28" height="28"></span>
+        <div>
+          <h2>Mango butter</h2>
+          <p>A close companion to shea &mdash; velvety on the skin, with a quiet richness that suits everyday body care.</p>
+        </div>
+      </article>
+      <article class="ingredient">
+        <span class="ingredient-mark" aria-hidden="true"><img src="assets/icons/marula.svg" alt="" width="28" height="28"></span>
+        <div>
+          <h2>Marula oil</h2>
+          <p>Used in WENDO to nourish lips without heaviness. A familiar oil in Southern and East African skin rituals.</p>
+        </div>
+      </article>
+      <article class="ingredient">
+        <span class="ingredient-mark" aria-hidden="true"><img src="assets/icons/beeswax.svg" alt="" width="28" height="28"></span>
+        <div>
+          <h2>Beeswax</h2>
+          <p>Gives WENDO its protective seal. Helps the balm stay put and shield lips from dry air.</p>
+        </div>
+      </article>
+    </div>
 
     <p>We keep claims modest: natural ingredients, made with care, handcrafted in Kenya. Full INCI lists will sit on each product as we prepare jars for sale.</p>
     <p><a class="script-link" href="thaayu.html">See THAAYU &rarr;</a> &nbsp; <a class="script-link" href="wendo.html">See WENDO &rarr;</a></p>
@@ -68,12 +95,13 @@
       <div class="footer-brand">
         <img src="assets/logo-mark.png" alt="" width="64" height="64">
         <div>
-          <p class="footer-name">SHAMBA</p>
+          <p class="footer-name wordmark">SHAMBA</p>
           <p class="footer-tag">From the Shamba.<br>Inspired by Kenyan Heritage.</p>
         </div>
       </div>
       <div>
         <h2 class="footer-script">Let's stay connected</h2>
+        <p class="footer-email"><a href="mailto:shamba@shamba.com">shamba@shamba.com</a></p>
         <div class="social">
           <a href="mailto:shamba@shamba.com" aria-label="Email SHAMBA">
             <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></svg>
@@ -91,7 +119,7 @@
         <li><a href="faqs.html">FAQs</a></li>
       </ul>
       <div class="footer-leaf" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 7.1C10.4 5.3 11.5 4 13 4c2.5 0 3 3 3 5 2 0 4 2 4 5a5 5 0 0 1-5 5h-4Z" /></svg>
+        <img src="assets/icons/sprig.svg" alt="" width="48" height="48">
       </div>
     </div>
     <div class="footer-bottom">

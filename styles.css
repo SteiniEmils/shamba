@@ -90,12 +90,18 @@ a, button { touch-action: manipulation; }
 
 .brand img { width: 56px; height: 56px; object-fit: contain; }
 
-.brand span {
+.wordmark,
+.brand span,
+.footer-name {
   font-family: var(--font-sans);
   font-weight: 500;
-  font-size: 20px;
-  letter-spacing: 0.32em;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
   color: var(--olive);
+}
+
+.brand span {
+  font-size: 18px;
 }
 
 .nav-links {
@@ -257,14 +263,10 @@ a, button { touch-action: manipulation; }
   place-items: center;
 }
 
-.feature-icon svg {
+.feature-icon svg,
+.feature-icon img {
   width: 22px;
   height: 22px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
 }
 
 .feature h2 {
@@ -488,12 +490,21 @@ a, button { touch-action: manipulation; }
 
 .footer-name {
   margin: 4px 0 8px;
-  font-family: var(--font-sans);
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: 0.3em;
-  color: var(--olive);
+  font-size: 16px;
 }
+
+.footer-email {
+  margin: 0 0 12px;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+}
+
+.footer-email a {
+  color: var(--olive);
+  text-decoration: none;
+}
+
+.footer-email a:hover { color: var(--terracotta); }
 
 .footer-tag {
   margin: 0;
@@ -562,12 +573,10 @@ a, button { touch-action: manipulation; }
   opacity: 0.45;
 }
 
-.footer-leaf svg {
+.footer-leaf svg,
+.footer-leaf img {
   width: 48px;
   height: 48px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.3;
 }
 
 .footer-bottom {
@@ -649,9 +658,73 @@ a, button { touch-action: manipulation; }
 
 .product-detail img {
   width: 100%;
+  aspect-ratio: 1;
   border-radius: 12px;
   object-fit: cover;
+  object-position: top center;
 }
+
+.page-photo {
+  margin: 8px 0 32px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--cream);
+}
+
+.page-photo img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.page-photo-tall img { aspect-ratio: 4 / 5; }
+
+.ingredient-list {
+  display: grid;
+  gap: 22px;
+  margin: 36px 0 28px;
+}
+
+.ingredient {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.ingredient h2,
+.page .ingredient h2 { margin: 0 0 6px; }
+
+.ingredient p { margin: 0; }
+
+.ingredient-mark {
+  width: 56px;
+  height: 56px;
+  border: 1px solid rgba(59, 74, 42, 0.45);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--olive);
+}
+
+.ingredient-mark img {
+  width: 28px;
+  height: 28px;
+}
+
+.contact-address {
+  margin: 8px 0 20px;
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  color: var(--olive);
+}
+
+.contact-address a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact-address a:hover { color: var(--terracotta); }
 
 .facts {
   list-style: none;
