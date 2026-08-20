@@ -8,17 +8,27 @@ nav?.querySelectorAll("a[data-nav]").forEach((link) => {
   link.classList.toggle("is-active", link.dataset.nav === current);
 });
 
+function setMenu(open) {
+  nav?.classList.toggle("is-open", open);
+  document.documentElement.classList.toggle("nav-open", open);
+  toggle?.setAttribute("aria-expanded", String(open));
+  toggle?.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+}
+
 toggle?.addEventListener("click", () => {
-  const open = nav.classList.toggle("is-open");
-  toggle.setAttribute("aria-expanded", String(open));
-  toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  setMenu(!nav.classList.contains("is-open"));
 });
 
 nav?.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => {
-    nav.classList.remove("is-open");
-    toggle?.setAttribute("aria-expanded", "false");
-  });
+  link.addEventListener("click", () => setMenu(false));
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") setMenu(false);
+});
+
+window.addEventListener("resize", () => {
+  if (window.matchMedia("(min-width: 901px)").matches) setMenu(false);
 });
 
 const form = document.querySelector(".contact-form");
